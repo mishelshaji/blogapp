@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -22,7 +23,13 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path: '', component: HomeComponent},
+      {path: 'about', component: AboutComponent},
+      {path: 'register', component: RegisterComponent},
+      {path: 'login', component: LoginComponent},
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
